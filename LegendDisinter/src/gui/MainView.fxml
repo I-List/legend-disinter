@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--*Original author: Luca Campese
+*Modified with permission by Isaiah List-->
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?scenebuilder-stylesheet style.css?>
+
+<BorderPane fx:id="root" prefHeight="600.0" prefWidth="900.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.controllers.MainController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem fx:id="loadClear" mnemonicParsing="false" onAction="#loadCleartext" text="Load Source Text" />
+                  <MenuItem fx:id="loadImage" mnemonicParsing="false" onAction="#loadImage" text="Load Image" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="saveClear" mnemonicParsing="false" onAction="#saveCleartext" text="Save Source Text" />
+                  <MenuItem fx:id="saveCipher" mnemonicParsing="false" onAction="#saveCiphertext" text="Save Output Text" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+              <MenuItem mnemonicParsing="false" onAction="#quit" text="Quit">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="Q" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Edit">
+              <items>
+                  <MenuItem mnemonicParsing="false" onAction="#addSpaces" text="Add Spaces">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="A" control="DOWN" meta="UP" shift="DOWN" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Statistics">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#showFrequencies" text="Show Frequencies">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="F" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+              </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#showAboutDialog" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <bottom>
+      <HBox alignment="CENTER" spacing="30.0" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets left="20.0" right="20.0" />
+         </padding>
+         <children>
+            <Button fx:id="digiButton" mnemonicParsing="false" onAction="#showDigiView" text="Digitize">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="5.0" />
+               </HBox.margin></Button>
+            <Button fx:id="breakerButton" mnemonicParsing="false" onAction="#showBreakerView" text="Decrypt">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="5.0" />
+               </HBox.margin></Button>
+            <Button fx:id="tranButton" mnemonicParsing="false" onAction="#showTranView" text="Tranlsate">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="5.0" />
+               </HBox.margin></Button>
+         </children>
+      </HBox>
+   </bottom>
+   <stylesheets>
+    <URL value="@style.css" />
+    </stylesheets>    
+</BorderPane>

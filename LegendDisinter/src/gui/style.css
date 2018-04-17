@@ -1,0 +1,166 @@
+/*
+* Created for a student project at Penn State
+*/
+/* 
+    Created on : Mar 28, 2018, 2:32:39 PM
+    Author     : Isaiah
+*/
+  * {
+    -fx-color-b1: #2C3E50;
+    -fx-color-b2: #2980B9;
+    -fx-color-b3: #3498DB;
+    -fx-color-w1: #ECF0F1;
+    -fx-color-r1: #E74C3C;
+  }
+  
+  .root {
+    -fx-background-color: -fx-color-b1;
+    -fx-background-radius: 5;
+    -fx-background-inset: 5;
+    -fx-border-color:-fx-color-r1;
+    -fx-border-insets:1;
+    -fx-border-radius:5;
+    -fx-base: -fx-color-b2;
+  }
+  /* Setup the buttons*/
+  .button {
+    -fx-background-radius: 5em;
+    -fx-min-width: 70px;
+    -fx-min-height: 70px;
+    -fx-max-width: 70px;
+    -fx-max-height: 70px;
+    -fx-background-color: -fx-color-r1;
+    -fx-text-fill: -fx-color-w1;
+  }
+  
+  .button-run{
+    -fx-background-radius: 5em;
+    -fx-min-width: 125px;
+    -fx-min-height: 125px;
+    -fx-max-width: 125px;
+    -fx-max-height: 125px;
+    -fx-background-color: -fx-color-r1;
+    -fx-text-fill: -fx-color-w1;
+      
+  }
+
+  /* Setup the menus*/
+  .menu-bar {
+      -fx-background-color: -fx-color-b3;
+  }
+  .menu-bar > .container > .menu-button {
+      -fx-background-color:-fx-color-b3;
+  }
+  .menu-bar > .container > .menu-button > .label{
+      -fx-text-fill:-fx-color-w1;
+  }
+  
+  .menu-bar > .container > .menu-button:hover,
+  .menu-bar > .container > .menu-button:focused,
+  .menu-bar > .container > .menu-button:showing {
+    -fx-background-color: -fx-color-b1;
+  }
+  
+  .menu-bar > .container > .menu-button:hover > .label,
+  .menu-bar > .container > .menu-button:focused > .label,
+  .menu-bar > .container > .menu-button:showing > .label {
+    -fx-text-fill: -fx-color-w1;
+  }
+  .menu-item {
+    -fx-background-color: -fx-color-b1; 
+  }
+   
+  .menu-item .label {
+    -fx-text-fill: -fx-color-w1;
+  }   
+   
+ .menu-item:focused, .menu-item:hovered {
+    -fx-background-color: -fx-color-r1; 
+ }
+ 
+  .menu-item:focused > .label, .menu-item:hovered > .label {
+    -fx-text-fill: -fx-color-w1;
+  }
+ 
+  .context-menu {
+    -fx-background-color: -fx-color-b1;
+    -fx-border-color: -fx-color-r1;
+  }
+  .separator > .line {
+      -fx-background-color: -fx-color-r1;
+      -fx-border-color: -fx-color-r1;
+  }
+  /* Setup the title panes*/
+  .titled-pane{
+      -fx-text-fill: -fx-color-w1;
+  }
+  .titled-pane > .title {
+      -fx-background-color: -fx-color-b3;
+      -fx-border-color: -fx-color-r1;
+  }
+  .titled-pane .content {
+      -fx-border-color: -fx-color-r1;
+      -fx-border-color: -fx-color-r1;
+  }
+  
+  /*Setup the tab panes*/
+  .tab-pane{
+      -fx-text-fill: -fx-color-w1;
+  }
+  .tab-pane > .title {
+      -fx-background-color: -fx-color-b1;
+      -fx-border-color: -fx-color-r1;
+  }
+  .tab-pane .tab-content-area {
+      -fx-background-color: -fx-color-b1;
+      -fx-border-color: -fx-color-r1;
+  }
+  .tab-pane > .tab-header-area > .tab-header-background{
+      -fx-background-color: -fx-color-b3;
+      -fx-border-color: -fx-color-r1;
+  }
+  
+  .tab-pane > .tab-header-area > .tab-header-background{
+      -fx-background-color: -fx-color-b2;
+      -fx-border-color: -fx-color-r1;
+  }
+  
+  .tab {
+      -fx-background-color: -fx-color-b1;
+      -fx-border-color: -fx-color-r1;
+  }
+  .tab:selected{
+      -fx-background-color: -fx-color-b3;
+      -fx-border-color: -fx-color-r1;
+  }
+  .tab-label{
+      -fx-text-fill: -fx-color-w1;
+  }
+  
+  /* Setup the text areas*/
+  .text-area{
+      -fx-prompt-text-fill: -fx-color-w1;
+      -fx-highlight-fill: -fx-color-w1;
+      -fx-highlight-text-fill: -fx-color-b1;
+  }
+  .text-area .content {
+      -fx-background-color: -fx-color-b2;
+      -fx-border-color: -fx-color-r1;
+  }
+  
+  /*Setup the choice box*/
+  .choice-box {
+      -fx-background-color: -fx-color-b1;
+      -fx-border-color: -fx-color-r1;
+  }
+  .choice-box > .open-button {
+      -fx-background-color: -fx-color-b1;
+  }
+  /*Setup the check box*/  
+   .check-box .box{
+      -fx-background-color: -fx-color-b1;
+  }
+  
+  .check-box:selected .mark{
+      -fx-background-color: -fx-color-r1;
+  }
